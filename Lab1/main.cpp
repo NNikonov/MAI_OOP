@@ -10,7 +10,7 @@ int main(int argc, char** argv)
 	std::cin >> k;
 	if (k == 1) // Square
 	{
-		std::cout << "Enter square sides: " << std::endl;
+		std::cout << "Enter square side: " << std::endl;
 		Figure *S = new Quadratum(std::cin);
 		S->Print();
 		std::cout << "Square = " << S->Square() << std::endl;

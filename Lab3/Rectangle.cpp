@@ -46,7 +46,7 @@ Rectangle::Rectangle(size_t i, size_t j)
 #endif
 }
 
-Rectangle::Rectangle(const Rectangle& orig)
+Rectangle::Rectangle(const Rectangle &orig)
 {
 
 #ifdef DEBUG
@@ -56,7 +56,7 @@ Rectangle::Rectangle(const Rectangle& orig)
 	side_b = orig.side_b;
 }
 
-Rectangle& Rectangle::operator=(const Rectangle& right)
+Rectangle &Rectangle::operator=(const Rectangle &right)
 {
 	if (this == &right)
 	{
@@ -78,28 +78,28 @@ double Rectangle::Square()
 	return double(side_a) * double(side_b);
 }
 
-bool operator>(const Rectangle& left, const Rectangle& right)
+bool operator>(Rectangle &left, Rectangle &right)
 {
-	return left.side_a * left.side_b > right.side_a * right.side_b;
+	return (left.Square() > right.Square());
 }
 
-bool operator<(const Rectangle& left, const Rectangle& right)
+bool operator<(Rectangle &left, Rectangle &right)
 {
 	return !(left > right || left == right);
 }
 
-bool operator==(const Rectangle& left, const Rectangle& right)
+bool operator==(Rectangle &left, Rectangle &right)
 {
 	return left.side_a == right.side_a && left.side_b == right.side_b;
 }
 
-std::ostream& operator<<(std::ostream& os, const Rectangle& obj)
+std::ostream& operator<<(std::ostream &os, const Rectangle &obj)
 {
 	os << "Rectangle (sides = " << obj.side_a << ", " << obj.side_b << ")" << std::endl;
 	return os;
 }
 
-std::istream& operator>>(std::istream& is, Rectangle& obj)
+std::istream& operator>>(std::istream &is, Rectangle &obj)
 {
 	is >> obj.side_a;
 	is >> obj.side_b;
@@ -107,7 +107,7 @@ std::istream& operator>>(std::istream& is, Rectangle& obj)
 	return is;
 }
 
-void Rectangle::print(std::ostream& os) const
+void Rectangle::print(std::ostream &os) const
 {
 	os << *this;
 }

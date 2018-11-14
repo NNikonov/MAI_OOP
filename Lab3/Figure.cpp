@@ -1,12 +1,13 @@
 #include "Figure.h"
 
-void Figure::print(std::ostream & os) const
+void Figure::print(std::ostream &os) const
 {
 }
 
 bool Figure::EqualFigures(std::shared_ptr<Figure> other)
 {
-	return (this->Square() == other->Square() && typeid(*this) == typeid(*other.get()));
+	if (typeid(*this) != typeid(*other.get())) return false;
+	else return (this->Square() == other->Square());
 }
 
 bool Figure::SquareLess(std::shared_ptr<Figure> other)
@@ -16,5 +17,5 @@ bool Figure::SquareLess(std::shared_ptr<Figure> other)
 
 bool Figure::SquareGreater(std::shared_ptr<Figure> other)
 {
-	return this->Square() > other->Square();
+	return (this->Square() > other->Square());
 }

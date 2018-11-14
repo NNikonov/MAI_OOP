@@ -10,18 +10,18 @@ public:
 	Rectangle();
 	Rectangle(std::istream &is);
 	Rectangle(size_t i, size_t j);
-	Rectangle(const Rectangle& orig);
+	Rectangle(const Rectangle &orig);
 
-	Rectangle& operator=(const Rectangle& right);
+	Rectangle &operator=(const Rectangle &right);
 	double Square();
 
-	friend bool operator>(const Rectangle& left, const Rectangle& right);
-	friend bool operator<(const Rectangle& left, const Rectangle& right);
-	friend bool operator==(const Rectangle& left, const Rectangle& right);
+	friend bool operator>(Rectangle& left, Rectangle &right);
+	friend bool operator<(Rectangle& left, Rectangle &right);
+	friend bool operator==(Rectangle& left, Rectangle &right);
 
-	friend std::ostream& operator<<(std::ostream& os, const Rectangle& obj);
-	friend std::istream& operator>>(std::istream& is, Rectangle& obj);
-	void print(std::ostream& os) const;
+	friend std::ostream &operator<<(std::ostream &os, const Rectangle &obj);
+	friend std::istream &operator>>(std::istream &is, Rectangle &obj);
+	void print(std::ostream &os) const;
 
 	virtual ~Rectangle();
 private:

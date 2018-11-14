@@ -70,7 +70,7 @@ int main(int argc, char** argv)
 			}
 			else
 			{
-				std::cout << " Invalid choice! " << std::endl;
+				std::cout << " Invalid figure! " << std::endl;
 				continue;
 			}
 			tree.DeleteNode(ptr_fig);
@@ -96,7 +96,7 @@ int main(int argc, char** argv)
 			}
 			else
 			{
-				std::cout << " Invalid choice! " << std::endl;
+				std::cout << " Invalid figure! " << std::endl;
 				continue;
 			}
 			if (tree.Find(ptr_fig) != nullptr)

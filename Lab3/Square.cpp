@@ -42,7 +42,7 @@ Quadratum::Quadratum(size_t side)
 #endif
 }
 
-Quadratum::Quadratum(const Quadratum& orig)
+Quadratum::Quadratum(const Quadratum &orig)
 {
 
 #ifdef DEBUG
@@ -51,7 +51,7 @@ Quadratum::Quadratum(const Quadratum& orig)
 	side = orig.side;
 }
 
-Quadratum& Quadratum::operator=(const Quadratum& right)
+Quadratum& Quadratum::operator=(const Quadratum &right)
 {
 	if (this == &right)
 	{
@@ -72,35 +72,35 @@ double Quadratum::Square()
 	return double(side) * double(side);
 }
 
-bool operator>(const Quadratum& left, const Quadratum& right)
+bool operator>(Quadratum &left, Quadratum &right)
 {
 	return left.side > right.side;
 }
 
-bool operator<(const Quadratum& left, const Quadratum& right)
+bool operator<(Quadratum &left, Quadratum &right)
 {
 	return !(left > right || left == right);
 }
 
-bool operator==(const Quadratum& left, const Quadratum& right)
+bool operator==(Quadratum &left, Quadratum &right)
 {
 	return left.side == right.side;
 }
 
-std::ostream& operator<<(std::ostream& os, const Quadratum& obj)
+std::ostream &operator<<(std::ostream &os, const Quadratum &obj)
 {
 	os << "Square (side = " << obj.side << ")" << std::endl;
 	return os;
 }
 
-std::istream& operator>>(std::istream& is, Quadratum& obj)
+std::istream &operator>>(std::istream &is, Quadratum &obj)
 {
 	is >> obj.side;
 
 	return is;
 }
 
-void Quadratum::print(std::ostream& os) const
+void Quadratum::print(std::ostream &os) const
 {
 	os << *this;
 }

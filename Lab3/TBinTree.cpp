@@ -83,11 +83,13 @@ std::shared_ptr<TBinTree::TNode>  TBinTree::deleteTreeNode(std::shared_ptr<TBinT
 		if (_root->left == nullptr)
 		{
 			std::shared_ptr<TBinTree::TNode> temp = _root->right;
+			std::cout << " Figure deleted " << std::endl;
 			return temp;
 		}
 		else if (_root->right == nullptr)
 		{
 			std::shared_ptr<TBinTree::TNode> temp = _root->left;
+			std::cout << " Figure deleted " << std::endl;
 			return temp;
 		}
 
@@ -97,7 +99,7 @@ std::shared_ptr<TBinTree::TNode>  TBinTree::deleteTreeNode(std::shared_ptr<TBinT
 	}
 	else if (key->SquareLess(_root->data))
 		_root->left = deleteTreeNode(_root->left, key);
-	else		//(key->SquareGreater(_root->data))
+	else
 		_root->right = deleteTreeNode(_root->right, key);
 
 	return _root;

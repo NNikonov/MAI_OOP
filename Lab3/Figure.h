@@ -9,7 +9,7 @@ class Figure
 {
 public:
 	virtual double Square() = 0;
-	virtual void print(std::ostream& os) const;
+	virtual void print(std::ostream &os) const;
 	bool EqualFigures(std::shared_ptr<Figure> other);
 	bool SquareLess(std::shared_ptr<Figure> other);
 	bool SquareGreater(std::shared_ptr<Figure> other);
@@ -18,4 +18,4 @@ public:
 };
 
 
-#endif  /*  FIGURE_H  */
+#endif

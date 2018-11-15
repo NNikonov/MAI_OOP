@@ -5,8 +5,6 @@
 #include "Rectangle.h"
 #include "Trapezium.h"
 
-typedef Quadratum TItem;
-
 class TBinTree
 {
 private:

@@ -28,9 +28,9 @@ public:
 	void DeleteNode(std::shared_ptr<Figure> key);
 	std::shared_ptr<TNode> MinValueTreeNode(std::shared_ptr<TNode> node);
 	std::shared_ptr<TNode> deleteTreeNode(std::shared_ptr<TNode> _root, std::shared_ptr<Figure> key);
-	std::ostream& InOrderPrint(std::ostream& os, std::shared_ptr<TNode> node, size_t level) const;
+	std::ostream &InOrderPrint(std::ostream &os, std::shared_ptr<TNode> node, size_t level) const;
 
-	friend std::ostream& operator<<(std::ostream& os, const TBinTree& bintree);
+	friend std::ostream &operator<<(std::ostream &os, const TBinTree &bintree);
 
 	virtual ~TBinTree();
 };

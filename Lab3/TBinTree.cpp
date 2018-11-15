@@ -71,7 +71,6 @@ void TBinTree::DeleteNode(std::shared_ptr<Figure> key)
 		return;
 
 	root = deleteTreeNode(root, key);
-
 }
 
 std::shared_ptr<TBinTree::TNode>  TBinTree::deleteTreeNode(std::shared_ptr<TBinTree::TNode> _root, std::shared_ptr<Figure> key)
@@ -105,7 +104,7 @@ std::shared_ptr<TBinTree::TNode>  TBinTree::deleteTreeNode(std::shared_ptr<TBinT
 	return _root;
 }
 
-std::ostream& TBinTree::InOrderPrint(std::ostream& os, std::shared_ptr<TBinTree::TNode> node, size_t level) const
+std::ostream &TBinTree::InOrderPrint(std::ostream &os, std::shared_ptr<TBinTree::TNode> node, size_t level) const
 {
 	if (node != nullptr)
 	{
@@ -118,7 +117,7 @@ std::ostream& TBinTree::InOrderPrint(std::ostream& os, std::shared_ptr<TBinTree:
 	return os;
 }
 
-std::ostream& operator<<(std::ostream& os, const TBinTree& bintree)
+std::ostream &operator<<(std::ostream &os, const TBinTree &bintree)
 {
 	if (bintree.IsEmpty())
 		os << "Empty tree\n";
